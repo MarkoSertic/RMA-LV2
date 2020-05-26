@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etIdentifier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/etNameLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ime i prezime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdentifier" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="datum rođenja"
+        app:layout_constraintTop_toBottomOf="@+id/etNameLastName"/>
+    <EditText
+        android:id="@+id/etInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="opis"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etDate"/>
+
+    <EditText
+        android:id="@+id/etImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="link za sliku"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etInfo"/>
+
+    <EditText
+        android:id="@+id/etQuotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="citati odvojeni sa  ';' "
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etImage"/>
+
+
+    <Button
+        android:id="@+id/btnADD2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="ADD"
+        app:layout_constraintTop_toBottomOf="@+id/etQuotes"
+        tools:layout_editor_absoluteX="20dp" />
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="BACK"
+        app:layout_constraintTop_toBottomOf="@+id/btnADD2"
+        tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
